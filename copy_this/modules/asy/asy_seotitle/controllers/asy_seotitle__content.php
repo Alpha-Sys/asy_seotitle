@@ -18,12 +18,24 @@ class asy_seotitle__content extends asy_seotitle__content_parent {
     public function getTitle() {
         if ( $oContent = $this->getContent() ) {
             $sSeoTitle = $oContent->oxcontents__asy_seotitle->value;
-            if($sSeoTitle && $sSeoTitle != ''){
+            if (empty($sSeoTitle)) {
+                // check field with sql because lazy loading is maybe activated
+                $sSeoTitle = $this->_getSeoTitleFromDb($oContent->oxcontents__oxid->value);
+            }
+            if (!empty($sSeoTitle)) {
                 return $sSeoTitle;
             } else {
                 return parent::getTitle();
             }
         }
+    }
+    
+    protected function _getSeoTitleFromDb($sOxid, $sField = 'asy_seotitle') {
+        $oDb = oxDb::getDb();
+        $sView = getViewName('oxcontents');
+        $sSelect = "Select $sField from $sView where oxid = '$sOxid'";
+        $sResult = $oDb->getOne($sSelect);
+        return $sResult;
     }
 
 }

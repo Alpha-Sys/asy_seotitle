@@ -7,10 +7,10 @@
  *
  * @link        http://www.alpha-sys.de
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>   
- * @copyright   (C) Alpha-Sys 2008-2012
- * @module      asy_voucher
+ * @copyright   (C) Alpha-Sys 2008-2014
+ * @module      asy_seotitle
  * @oxidversion OXID eShop PE, EE
- * @version     22.09.2012  1.0
+ * @version     01.11.2014  1.2
  */
 
 /**
@@ -18,17 +18,17 @@
  */
 $aModule = array(
     'id'           => 'asy_seotitle',
-    'title'        => 'SEO Title Basic',
+    'title'        => '<img src="../modules/asy/module_logo.png" alt="Alpha-Sys" title="Alpha-Sys"> SEO Title Basic',
     'description'  => 'Mit diesm Modul können Sie den Meta Title von Artikeln, Kategorien und CMS-Seiten manuell pflegen.',
     'thumbnail'    => 'module_seotitle.png',
-    'version'      => '1.0',
+    'version'      => '1.2',
     'author'       => 'Alpha-Sys',
     'email'        => 'fabian.kunkler@alpha-sys.de',
     'url'          => 'http://www.alpha-sys.de',
     'extend'       => array(
-        'alist' => 'asy_seotitle/views/asy_seotitle__alist' ,
-        'content' => 'asy_seotitle/views/asy_seotitle__content',
-        'details' => 'asy_seotitle/views/asy_seotitle__details'
+        'alist' => 'asy/asy_seotitle/controllers/asy_seotitle__alist' ,
+        'content' => 'asy/asy_seotitle/controllers/asy_seotitle__content',
+        'details' => 'asy/asy_seotitle/controllers/asy_seotitle__details'
     ),
     'blocks' => array(
         array('template' => 'article_main.tpl', 'block'=>'admin_article_main_form', 'file'=>'admin_article_main_form.tpl'),
