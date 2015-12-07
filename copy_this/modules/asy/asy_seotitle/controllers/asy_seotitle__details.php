@@ -8,10 +8,11 @@
  *
  * @link        http://www.alpha-sys.de
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>   
- * @copyright   (C) Alpha-Sys 2008-2012
- * @version     OXID eShop PE, EE
- * @version     20.09.2012  1.0
- * @module      details => asy_seotitle/views/asy_seotitle__details
+ * @copyright   (C) Alpha-Sys 2008-2015
+ * @oxidversion OXID eShop PE, EE
+ * @version     02.11.2015  2.0
+ * @module		asy_seotitle
+ * @extends     details => asy/asy_seotitle/views/asy_seotitle__details
  */
 class asy_seotitle__details extends asy_seotitle__details_parent {
 
