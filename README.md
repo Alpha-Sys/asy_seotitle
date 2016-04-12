@@ -2,7 +2,7 @@
 asy_seotitle
 
 ### Version ###
-2.0
+2.1
 
 ### Oxid-Version ###
 4.6.0 - 4.9.x

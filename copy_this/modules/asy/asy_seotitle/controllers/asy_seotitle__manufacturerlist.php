@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This Software is property of Alpha-Sys and is protected by
  * copyright law - it is NOT Freeware.
@@ -8,12 +7,11 @@
  *
  * @link        http://www.alpha-sys.de
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>   
- * @copyright   (C) Alpha-Sys 2008-2015
- * @oxidversion OXID eShop PE, EE
- * @version     02.11.2015  2.0
- * @module		asy_seotitle
- * @extends     manufacturerlist => asy/asy_seotitle/controllers/asy_seotitle__manufacturerlist
+ * @copyright   (C) Alpha-Sys 2008-2016
+ * @module      asy_seotitle
+ * @version     12.04.2016  2.1
  */
+
 class asy_seotitle__manufacturerlist extends asy_seotitle__manufacturerlist_parent {
 
     public function getTitle() {

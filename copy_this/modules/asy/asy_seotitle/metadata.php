@@ -7,11 +7,15 @@
  *
  * @link        http://www.alpha-sys.de
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>   
- * @copyright   (C) Alpha-Sys 2008-2015
+ * @copyright   (C) Alpha-Sys 2008-2016
  * @module      asy_seotitle
- * @oxidversion OXID eShop PE, EE
- * @version     02.11.2015  2.0
+ * @version     12.04.2016  2.1
  */
+
+/**
+ * Metadata version
+ */
+$sMetadataVersion = '1.1';
 
 /**
  * Module information
@@ -23,17 +27,17 @@ $aModule = array(
     	'de' => 'Mit diesm Modul können Sie den Meta Title von Artikeln, Kategorien, CMS-Seiten, Hersteller und Lieferanten manuell pflegen.',
     	'en' => 'You can edit the meta title of articles, categories, content pages, manufacturers and vendors.'
     ),
-    'thumbnail'    => 'module_seotitle.png',
-    'version'      => '2.0',
+    'thumbnail'    => 'module_logo.png',
+    'version'      => '2.1',
     'author'       => 'Alpha-Sys',
     'email'        => 'fabian.kunkler@alpha-sys.de',
     'url'          => 'http://www.alpha-sys.de',
     'extend'       => array(
-        'alist' 			=> 'asy/asy_seotitle/controllers/asy_seotitle__alist' ,
-        'content' 			=> 'asy/asy_seotitle/controllers/asy_seotitle__content',
-        'details' 			=> 'asy/asy_seotitle/controllers/asy_seotitle__details',
-        'manufacturerlist' 	=> 'asy/asy_seotitle/controllers/asy_seotitle__manufacturerlist',
-        'vendorlist' 		=> 'asy/asy_seotitle/controllers/asy_seotitle__vendorlist'
+        'alist'             => 'asy/asy_seotitle/controllers/asy_seotitle__alist' ,
+        'content'           => 'asy/asy_seotitle/controllers/asy_seotitle__content',
+        'details'           => 'asy/asy_seotitle/controllers/asy_seotitle__details',
+        'manufacturerlist'  => 'asy/asy_seotitle/controllers/asy_seotitle__manufacturerlist',
+        'vendorlist'        => 'asy/asy_seotitle/controllers/asy_seotitle__vendorlist'
     ),
     'blocks' => array(
         array('template' => 'article_main.tpl', 'block'=>'admin_article_main_form', 'file'=>'admin_article_main_form.tpl'),
