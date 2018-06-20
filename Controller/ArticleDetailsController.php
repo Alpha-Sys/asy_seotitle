@@ -9,7 +9,7 @@
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>   
  * @copyright   (C) Alpha-Sys 2008-2018
  * @module      asy_seotitle
- * @version     22.01.2018 3.0.0
+ * @version     22.01.2018 3.0.1
  */
 
 namespace AlphaSys\AsySeoTitle\Controller;
