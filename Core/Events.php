@@ -9,7 +9,7 @@
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>
  * @copyright   (C) Alpha-Sys 2008-2018
  * @module      asy_seotitle
- * @version     22.01.2018 3.0.0
+ * @version     20.06.2018 3.0.0
  */
 
 namespace AlphaSys\AsySeoTitle\Core;
@@ -22,6 +22,11 @@ class Events {
     public static function onActivate()
     {
         self::addTableFields();
+        
+        $oDbHandler = oxNew( 'oxDbMetaDataHandler' );
+        $oDbHandler->updateViews();
+        
+        self::clearTmp();
     }
 
     /**
@@ -31,7 +36,7 @@ class Events {
      */
     public static function onDeactivate()
     {
-
+        self::clearTmp();
     }
 
 
@@ -61,6 +66,46 @@ class Events {
                 }
             }
         }
+    }
+    
+    public static function clearTmp( $sClearFolderPath = '' )
+    {
+        $sTempFolderPath = realpath(oxRegistry::getConfig()->getConfigParam( 'sCompileDir' ));
+
+        if ( !empty( $sClearFolderPath ) and
+             ( strpos( $sClearFolderPath, $sTempFolderPath ) !== false ) and
+             is_dir( $sClearFolderPath )
+        ) {
+
+            // User argument folder path to delete from
+            $sFolderPath = $sClearFolderPath;
+        } elseif ( empty( $sClearFolderPath ) ) {
+
+            // Use temp folder path from settings
+            $sFolderPath = $sTempFolderPath;
+        } else {
+            return false;
+        }
+
+        $hDir = opendir( $sFolderPath );
+
+        if ( !empty( $hDir ) ) {
+            while ( false !== ( $sFileName = readdir( $hDir ) ) ) {
+                $sFilePath = $sFolderPath . '/' . $sFileName;
+
+                if ( !in_array( $sFileName, array('.', '..', '.htaccess') ) and is_file( $sFilePath ) ) {
+
+                    // Delete a file if it is allowed to delete
+                    @unlink( $sFilePath );
+                } elseif ( $sFileName == 'smarty' and is_dir( $sFilePath ) ) {
+
+                    // Recursive call to clear smarty folder
+                    self::clearTmp( $sFilePath );
+                }
+            }
+        }
+
+        return true;
     }
 
 }
