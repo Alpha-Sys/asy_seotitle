@@ -5,7 +5,7 @@ asy_seotitle
 2.1
 
 ### Oxid-Version ###
-4.6.0 - 4.9.x
+4.6.0 - 4.10.x
 
 ### Author ###
 Alpha-Sys
