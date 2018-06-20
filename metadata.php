@@ -10,15 +10,16 @@ $sMetadataVersion = '2.0';
  */
 $aModule = array(
     'id'           => 'asy_seotitle',
-    'title'        => 'SEO Title Basic',
+    'title'        => '<img src="../modules/asy/asy_seotitle/module_icon.png" alt="Alpha-Sys" title="Alpha-Sys"> SEO Title Basic',
     'description'  => array(
         'de' => 'Mit diesem Modul können Sie den Meta Title von Artikeln, Kategorien, CMS-Seiten, Hersteller und Lieferanten manuell pflegen.'
     ),
     'thumbnail'    => 'module_logo.png',
-    'version'      => '3.0.1',
+    'version'      => '3.0.2',
     'author'       => 'Alpha-Sys',
     'email'        => 'fabian.kunkler@alpha-sys.de',
     'url'          => 'http://www.alpha-sys.de',
+    'thumbnail'    => 'module_logo.png',
     'extend'       => array(
         //'details'           => 'asy/asy_seotitle/Controller/asy_seotitle__details',
         \OxidEsales\Eshop\Application\Controller\ArticleDetailsController::class => \AlphaSys\AsySeoTitle\Controller\ArticleDetailsController::class,

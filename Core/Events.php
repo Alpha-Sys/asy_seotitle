@@ -9,7 +9,7 @@
  * @author      Fabian Kunkler <fabian.kunkler@alpha-sys.de>
  * @copyright   (C) Alpha-Sys 2008-2018
  * @module      asy_seotitle
- * @version     20.06.2018 3.0.1
+ * @version     20.06.2018 3.0.2
  */
 
 namespace AlphaSys\AsySeoTitle\Core;
@@ -70,7 +70,7 @@ class Events {
     
     public static function clearTmp( $sClearFolderPath = '' )
     {
-        $sTempFolderPath = realpath(oxRegistry::getConfig()->getConfigParam( 'sCompileDir' ));
+        $sTempFolderPath = realpath(\OxidEsales\Eshop\Core\Registry::getConfig()->getConfigParam( 'sCompileDir' ));
 
         if ( !empty( $sClearFolderPath ) and
              ( strpos( $sClearFolderPath, $sTempFolderPath ) !== false ) and
