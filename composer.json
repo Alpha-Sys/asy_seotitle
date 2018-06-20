@@ -1,0 +1,20 @@
+{
+    "name": "alphasys/asy_seotitle",
+    "description": "seo title module.",
+    "type": "oxideshop-module",
+    "keywords": ["oxid", "modules", "eShop", "seo"],
+    "homepage": "https://www.alpha-sys.de",
+    "version": "3.0.0",
+    "extra": {
+        "oxideshop": {
+            "target-directory": "asy/asy_seotitle"
+        }
+    },
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "AlphaSys\\AsySeoTitle\\": "../../../source/modules/asy/asy_seotitle"
+        }
+    }
+}
