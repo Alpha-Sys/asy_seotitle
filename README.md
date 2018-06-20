@@ -2,10 +2,10 @@
 asy_seotitle
 
 ### Version ###
-2.1
+3.0.0
 
 ### Oxid-Version ###
-4.6.0 - 4.10.x
+6.0.x
 
 ### Author ###
 Alpha-Sys
@@ -14,17 +14,17 @@ fabian.kunkler@alpha-sys.de
 www.alpha-sys.de
 
 ### Beschreibung ###
-Mit diesem Modul können Sie den SEO Title (meta tag title) für Artikel, Kategorien, Hersteller, Lieferanten und CMS-Inhalte 
+Mit diesem Modul kÃ¶nnen Sie den SEO Title (meta tag title) fÃ¼r Artikel, Kategorien, Hersteller, Lieferanten und CMS-Inhalte 
 manuell im Admin pflegen. Wird hier kein Wert gepflegt, so greift die Standard-Logik von Oxid und der normale Titel wird gezogen.
 
 ### Installation ###
 Kopieren Sie alle Dateien aus dem Ordner "copy_this" in Ihr Shopverzeichnis.
-Melden Sie sich im Admin an und navigieren zu Erweiterungen -> Module. Wählen Sie den Eintrag SEO Title Basic
+Melden Sie sich im Admin an und navigieren zu Erweiterungen -> Module. WÃ¤hlen Sie den Eintrag SEO Title Basic
 aus und klicken Sie auf aktivieren.
-Führen Sie die SQL-Befehle aus der Datei install.sql auf Ihrer Datenbank aus. Hierfür können Sie entweder phpMyAdmin
-oder ein anderes SQL-Tool verwenden. Alternativ navigieren Sie im Oxid Admin zu "Service" -> "Tools". Fügen Sie die SQL-Befehle
-aus der Datei in das Textfeld "SQL ausführen" ein und klicken auf "Update starten".
-Leeren Sie nun den tmp-Ordner Ihres Shops. Als letztes müssen Sie die Views updaten (unter "Service" -> "Tools" auf 
+FÃ¼hren Sie die SQL-Befehle aus der Datei install.sql auf Ihrer Datenbank aus. HierfÃ¼r kÃ¶nnen Sie entweder phpMyAdmin
+oder ein anderes SQL-Tool verwenden. Alternativ navigieren Sie im Oxid Admin zu "Service" -> "Tools". FÃ¼gen Sie die SQL-Befehle
+aus der Datei in das Textfeld "SQL ausfÃ¼hren" ein und klicken auf "Update starten".
+Leeren Sie nun den tmp-Ordner Ihres Shops. Als letztes mÃ¼ssen Sie die Views updaten (unter "Service" -> "Tools" auf 
 "Views jetzt updaten" klicken).
-Wenn Sie nun im Admin auf Artikel, Kategorien, Hersteller, Lieferanten oder CMS-Seiten gehen, können Sie unten im
+Wenn Sie nun im Admin auf Artikel, Kategorien, Hersteller, Lieferanten oder CMS-Seiten gehen, kÃ¶nnen Sie unten im
 Hauptfenster den SEO-Title konfigurieren.
