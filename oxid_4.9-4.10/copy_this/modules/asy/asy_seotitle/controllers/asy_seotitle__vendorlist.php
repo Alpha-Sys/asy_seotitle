@@ -12,14 +12,14 @@
  * @version     12.04.2016  2.1
  */
 
-class asy_seotitle__alist extends asy_seotitle__alist_parent {
+class asy_seotitle__vendorlist extends asy_seotitle__vendorlist_parent {
 
     public function getTitle() {
-        if ($oCategory = $this->getActCategory()) {
-            $sSeoTitle = $oCategory->oxcategories__asy_seotitle->value;
+        if ($oVendor = $this->getActVendor()) {
+            $sSeoTitle = $oVendor->oxvendor__asy_seotitle->value;
             if (empty($sSeoTitle)) {
                 // check field with sql because lazy loading is maybe activated
-                $sSeoTitle = $this->_getSeoTitleFromDb($oCategory->oxcategories__oxid->value);
+                $sSeoTitle = $this->_getSeoTitleFromDb($oVendor->oxvendor__oxid->value);
             }
             if (!empty($sSeoTitle)) {
                 return $sSeoTitle;
@@ -31,7 +31,7 @@ class asy_seotitle__alist extends asy_seotitle__alist_parent {
 
     protected function _getSeoTitleFromDb($sOxid, $sField = 'asy_seotitle') {
         $oDb = oxDb::getDb();
-        $sView = getViewName('oxcategories');
+        $sView = getViewName('oxvendor');
         $sSelect = "Select $sField from $sView where oxid = '$sOxid'";
         $sResult = $oDb->getOne($sSelect);
         return $sResult;
