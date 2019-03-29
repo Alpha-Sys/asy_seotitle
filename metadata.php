@@ -15,7 +15,7 @@ $aModule = array(
         'de' => 'Mit diesem Modul können Sie den Meta Title von Artikeln, Kategorien, CMS-Seiten, Hersteller und Lieferanten manuell pflegen.'
     ),
     'thumbnail'    => 'module_logo.png',
-    'version'      => '3.0.2',
+    'version'      => '3.0.3',
     'author'       => 'Alpha-Sys',
     'email'        => 'fabian.kunkler@alpha-sys.de',
     'url'          => 'http://www.alpha-sys.de',
@@ -37,7 +37,7 @@ $aModule = array(
     ),
     'blocks' => array(
         array('template' => 'article_main.tpl', 'block'=>'admin_article_main_form', 'file'=>'views/blocks/admin_article_main_form.tpl'),
-        array('template' => 'category_main.tpl', 'block'=>'admin_category_main_form', 'file'=>'views/blocks/admin_category_main_form.tpl'),
+        array('template' => 'include/category_main_form.tpl', 'block'=>'admin_category_main_form', 'file'=>'views/blocks/admin_category_main_form.tpl'),
         array('template' => 'content_main.tpl', 'block'=>'admin_content_main_form', 'file'=>'views/blocks/admin_content_main_form.tpl'),
         array('template' => 'manufacturer_main.tpl', 'block'=>'admin_manufacturer_main_form', 'file'=>'views/blocks/admin_manufacturer_main_form.tpl'),
         array('template' => 'vendor_main.tpl', 'block'=>'admin_vendor_main_form', 'file'=>'views/blocks/admin_vendor_main_form.tpl'),
